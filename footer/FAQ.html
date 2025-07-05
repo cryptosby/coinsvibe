@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Coins Vibe </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 1px solid #334155;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            flex-grow: 1;
+        }
+        
+        .content-section h2 {
+            color: #e2e8f0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover {
+            color: #3b82f6;
+        }
+        
+        .faq-answer {
+            color: #cbd5e1;
+            line-height: 1.7;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-answer.show {
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            background: none;
+            border: none;
+            color: #94a3b8;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #3b82f6;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Coins Vibe </h1>
+            <p class="subtitle">Stay updated with the latest crypto market news and trends in real time</p>
+        </header>
+        
+        <section class="content-section">
+            <h2><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span>How often is the news updated?</span>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p>Our news aggregator updates every 15 minutes, pulling in the latest stories from our trusted sources. For breaking news, we manually verify and update important stories as they happen.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span>Where do you source your news from?</span>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p>We aggregate content from reputable cryptocurrency news outlets including CoinTelegraph, Decrypt, CryptoNews, and CoinDesk. All sources are carefully selected for their reliability and journalistic standards.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span>Is there a mobile app available?</span>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p>Currently, we don't have a dedicated mobile app, but our website is fully responsive and works perfectly on mobile browsers. We're planning to release native apps for iOS and Android in the near future.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span>How can I customize my news feed?</span>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p>You can use the filter buttons at the top of the news section to view only specific categories like Bitcoin, Ethereum, or NFTs. Additionally, the search function allows you to find news about specific cryptocurrencies or topics.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span>Are the market statistics real-time?</span>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p>Our market statistics are updated every minute using data from CoinGecko's API. While not technically real-time, the data is never more than a minute old during normal operation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span>How can I contact your team?</span>
+                    <button class="faq-toggle"><i class="fas fa-chevron-down"></i></button>
+                </div>
+                <div class="faq-answer">
+                    <p>You can reach us through the contact form on our <a href="Contact.html" style="color: #3b82f6;">Contact page</a>. For press inquiries, please include "PRESS" in your subject line. We typically respond within 24-48 hours.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="About.html">About</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="PrivacyPolicy.html">Privacy Policy</a>
+                <a href="TermsOfService.html">Terms of Service</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Coins Vibe. All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleAnswer(question) {
+            const answer = question.nextElementSibling;
+            const icon = question.querySelector('.faq-toggle i');
+            
+            answer.classList.toggle('show');
+            
+            if (answer.classList.contains('show')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+    </script>
+</body>
+</html>
