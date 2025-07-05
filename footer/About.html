@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Coins Vibe </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-bottom: 1px solid #334155;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .content-section {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            flex-grow: 1;
+        }
+        
+        .content-section h2 {
+            color: #e2e8f0;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .content-section p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .team-card {
+            background: #334155;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #475569;
+        }
+        
+        .team-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 3px solid #3b82f6;
+        }
+        
+        .team-card h3 {
+            color: #e2e8f0;
+            margin-bottom: 5px;
+        }
+        
+        .team-card p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: #94a3b8;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #3b82f6;
+        }
+
+        /* Footer styles */
+        footer {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 30px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #3b82f6;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-chart-line"></i> Coins Vibe </h1>
+            <p class="subtitle">Stay updated with the latest crypto market news and trends in real time</p>
+        </header>
+        
+        <section class="content-section">
+            <h2><i class="fas fa-info-circle"></i> About Us</h2>
+            <p>Coins Vibe is your premier destination for real-time cryptocurrency news, market analysis, and blockchain technology updates. Our mission is to provide accurate, timely, and comprehensive coverage of the fast-moving crypto world.</p>
+            
+            <p>Founded in 2025, our team of experienced journalists and crypto enthusiasts work around the clock to bring you the most relevant and impactful stories from the blockchain ecosystem. We aggregate content from trusted sources and provide original analysis to help you make informed decisions in this dynamic market.</p>
+            
+          
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="About.html">About</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="PrivacyPolicy.html">Privacy Policy</a>
+                <a href="TermsOfService.html">Terms of Service</a>
+                <a href="Contact.html">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Coins Vibe. All rights reserved.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
